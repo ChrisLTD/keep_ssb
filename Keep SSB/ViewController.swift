@@ -7,21 +7,36 @@
 //
 
 import Cocoa
+import WebKit
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, WKUIDelegate {
 
+    var webView: WKWebView!
+    
+    let webUrl = "https://keep.google.com"
+    let webName = "Google Keep"
+    
+    override func loadView() {
+        super.loadView()
+        
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        webView.uiDelegate = self
+        view = webView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let myURL = URL(string:webUrl)
+        let myRequest = URLRequest(url: myURL!)
+        webView.load(myRequest)
     }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+    
+        self.view.window?.title = webName
     }
-
-
 }
 

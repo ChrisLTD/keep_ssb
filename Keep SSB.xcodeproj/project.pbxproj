@@ -21,6 +21,7 @@
 		4932DF9322D274180017FBAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4932DF9522D274180017FBAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4932DF9622D274180017FBAB /* Keep_SSB.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Keep_SSB.entitlements; sourceTree = "<group>"; };
+		4932DF9C22D27A770017FBAB /* Keep SSB.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Keep SSB.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +54,7 @@
 		4932DF8B22D274160017FBAB /* Keep SSB */ = {
 			isa = PBXGroup;
 			children = (
+				4932DF9C22D27A770017FBAB /* Keep SSB.entitlements */,
 				4932DF8C22D274160017FBAB /* AppDelegate.swift */,
 				4932DF8E22D274160017FBAB /* ViewController.swift */,
 				4932DF9022D274180017FBAB /* Assets.xcassets */,
@@ -95,6 +97,11 @@
 				TargetAttributes = {
 					4932DF8822D274160017FBAB = {
 						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -271,7 +278,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Keep SSB/Keep_SSB.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Keep SSB/Keep SSB.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8G5N6F45D6;
@@ -290,7 +297,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Keep SSB/Keep_SSB.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Keep SSB/Keep SSB.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8G5N6F45D6;
